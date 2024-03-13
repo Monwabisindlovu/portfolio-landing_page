@@ -3,66 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Project Landing Page</title>
+    <title>Monwabisi Portfolio Landing Page</title>
     <style>
         body {
-            background-color: #a3c4b0; /* Replace with any color you want */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0a0b0b; /* Background color */
+            overflow: hidden;
+        }
+
+        .clouds-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Ensure clouds are behind other content */
+        }
+
+        .clouds {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://github.com/Monwabisindlovu/portfolio-landing_page/blob/main/images/background.jpeg?raw=true'); /* Replace with your cloud background image */
+            animation: moveClouds 60s linear infinite;
+        }
+
+        @keyframes moveClouds {
+            from { background-position: 0 0; }
+            to { background-position: 10000px 0; }
+        }
+
+        header {
+            background-color: #36454f; /* Header background color */
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #ffffff; /* Header text color */
+            font-size: 28px;
+        }
+
+        .section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .section {
+            background-color: #ffffff; /* Section background color */
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 20px;
+            width: 300px; /* Section width */
+        }
+
+        .section h2 {
+            color: #36454f; /* Section heading color */
+        }
+
+        .section p {
+            color: #707070; /* Section text color */
+        }
+
+        .section img {
+            width: 150px; /* Image width */
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #36454f; /* Button background color */
+            color: #ffffff; /* Button text color */
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background-color: #263238; /* Button hover color */
         }
     </style>
-    <link rel="stylesheet" href="styles.css"> <!-- Include your CSS file -->
 </head>
 <body>
+    <div class="clouds-wrapper">
+        <a href="https://monwabisi16.pythonanywhere.com/">
+            <div class="clouds"></div>
+        </a>
+    </div>
+
     <header>
-        <nav>
-            <ul>
-                <li><a href="#intro">Intro</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
-        </nav>
+        <h1>Monwabisi Portfolio Landing Page</h1>
     </header>
-    
-    <section id="intro">
-        <div class="cover-image">
+
+    <div class="section-container">
+        <div class="section">
             <img src="https://github.com/Monwabisindlovu/portfolio-landing_page/blob/main/images/background.jpeg?raw=true" alt="cover image"> <!-- Add your image URL here -->
+            <h2>Welcome to Monwabisi Portfolio Landing Page</h2>
+            <p>Get accurate weather forecasts for any location</p>
+            <a href="https://monwabisi16.pythonanywhere.com/" class="button">Visit Project</a> <!-- Add your project URL here -->
         </div>
-        <h1>WeatherApp - Your Personal Weather Station</h1>
-        <p>Get accurate weather forecasts for any location</p>
-        <a href="https://monwabisi16.pythonanywhere.com/" class="button">Visit Project</a> <!-- Add your project URL here -->
-    </section>
-    
-    <section id="features">
-        <div class="feature">
+
+        <div class="section">
             <img src="https://github.com/Monwabisindlovu/portfolio-landing_page/blob/main/images/MD.png?raw=true"> <!-- Add your image URL here -->
             <h2>Real-Time Weather Updates</h2>
             <p>Stay informed with live weather updates for your chosen location.</p>
         </div>
-        <div class="feature">
+
+        <div class="section">
             <img src="https://github.com/Monwabisindlovu/portfolio-landing_page/blob/main/images/R.jpeg?raw=true" alt="Feature 2"> <!-- Add your image URL here -->
             <h2>Hourly & Daily Forecasts</h2>
             <p>Plan your day or week ahead with hourly and daily weather forecasts.</p>
         </div>
-        <div class="feature">
+
+        <div class="section">
             <img src="https://github.com/Monwabisindlovu/portfolio-landing_page/blob/main/images/HD-Weather-Picture.jpg?raw=true" alt="Feature 3"> <!-- Add your image URL here -->
             <h2>Weather Alerts</h2>
             <p>Receive alerts for severe weather conditions in your area.</p>
         </div>
-    </section>
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p>The idea for WeatherApp stemmed from my desire to create a user-friendly platform for accessing accurate weather forecasts. As outdoor enthusiasts, l understand the importance of reliable weather information in planning various activities. This project is a culmination of my passion for coding and my interest in meteorology.</p>
-        <p>Team Member:</p>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/monwabisi-ndlovu-3270a020b">Monwabisi Ndlovu - LinkedIn</a></li> <!-- Add your LinkedIn URL here -->
-            <li><a href="https://github.com/Monwabisindlovu">Monwabisi Ndlovu - GitHub</a></li> <!-- Add your GitHub URL here -->
-            <li><a href="[Follow MDRyan43203488 on Twitter](https://twitter.com/MDRyan43203488)">Monwabisi Ndlovu - Twitter</a></li> <!-- Add your Twitter URL here -->
-        </ul>
-        <a href="URL_TO_YOUR_GITHUB_REPOSITORY" class="button">GitHub Repository</a> <!-- Add your GitHub repository URL here -->
-    </section>
-    
-    <!-- Optional Video Section -->
-    
+
+        <div class="section">
+            <h2>About Me</h2>
+            <img src="https://github.com/Monwabisindlovu/portfolio-landing_page/blob/main/images/pqjjw8cr.png?raw=true" alt="Monwabisi Ndlovu"> <!-- Add your image URL here -->
+            <p>The idea for WeatherApp stemmed from my desire to create a user-friendly platform for accessing accurate weather forecasts. As outdoor enthusiasts, l understand the importance of reliable weather information in planning various activities. This project is a culmination of my passion for coding and my interest in meteorology.</p>
+            <p>Team Member:</p>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/monwabisi-ndlovu-3270a020b">Monwabisi Ndlovu - LinkedIn</a></li> <!-- Add your LinkedIn URL here -->
+                <li><a href="https://github.com/Monwabisindlovu">Monwabisi Ndlovu - GitHub</a></li> <!-- Add your GitHub URL here -->
+                <li><a href="[Follow MDRyan43203488 on Twitter](https://twitter.com/MDRyan43203488)">Monwabisi Ndlovu - Twitter</a></li> <!-- Add your Twitter URL here -->
+            </ul>
+            <a href="URL_TO_YOUR_GITHUB_REPOSITORY" class="button">GitHub Repository</a> <!-- Add your GitHub repository URL here -->
+        </div>
+    </div>
+
     <footer>
         <!-- Footer content -->
     </footer>
