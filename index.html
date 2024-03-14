@@ -10,7 +10,7 @@
             padding: 0;
             font-family: Arial, sans-serif;
             background-color: #0a0b0b; /* Background color */
-            overflow: hidden;
+            overflow-x: hidden; /* Hide horizontal overflow on small screens */
         }
 
         .clouds-wrapper {
@@ -51,9 +51,10 @@
 
         .section-container {
             display: flex;
+            flex-wrap: wrap; /* Allow sections to wrap to the next line on smaller screens */
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh; /* Ensure sections take at least the height of the viewport */
         }
 
         .section {
@@ -62,7 +63,8 @@
             text-align: center;
             border-radius: 10px;
             margin: 20px;
-            width: 300px; /* Section width */
+            width: calc(50% - 40px); /* Set section width for medium screens */
+            max-width: 300px; /* Limit section width for larger screens */
         }
 
         .section h2 {
@@ -75,6 +77,7 @@
 
         .section img {
             width: 150px; /* Image width */
+            height: 150px; /* Ensure square images */
             border-radius: 50%;
             margin-bottom: 10px;
         }
@@ -91,6 +94,13 @@
 
         .button:hover {
             background-color: #263238; /* Button hover color */
+        }
+
+        /* Media query for small screens */
+        @media only screen and (max-width: 768px) {
+            .section {
+                width: calc(100% - 40px); /* Full width for small screens */
+            }
         }
     </style>
 </head>
